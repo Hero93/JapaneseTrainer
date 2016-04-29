@@ -1,25 +1,149 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q3g-qm-ltA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-87-ZFN">
+                                <rect key="frame" x="16" y="199" width="288" height="30"/>
+                                <state key="normal" title="Start Training"/>
+                                <connections>
+                                    <action selector="startTrainingTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rO-vc-x2o"/>
+                                    <segue destination="dac-vZ-mG6" kind="push" id="Lj0-VM-vQB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu8-xb-ajf">
+                                <rect key="frame" x="16" y="237" width="288" height="30"/>
+                                <state key="normal" title="Add new words"/>
+                                <connections>
+                                    <action selector="addNewWordsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWQ-X7-8XA"/>
+                                    <segue destination="7tR-Hv-XVj" kind="modal" id="45W-dW-Pd8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uF3-87-ZFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4if-qS-TbN"/>
+                            <constraint firstItem="Yu8-xb-ajf" firstAttribute="top" secondItem="uF3-87-ZFN" secondAttribute="bottom" constant="8" symbolic="YES" id="K2A-pr-yhV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uF3-87-ZFN" secondAttribute="trailing" id="TjZ-GQ-FsU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yu8-xb-ajf" secondAttribute="trailing" id="XrF-bQ-90q"/>
+                            <constraint firstItem="uF3-87-ZFN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="179" id="mnJ-3X-mFj"/>
+                            <constraint firstItem="Yu8-xb-ajf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oou-KH-ycG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nGd-8U-ukN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="676" y="298"/>
+        </scene>
+        <!--Trainer View Controller-->
+        <scene sceneID="zPb-Xb-kMl">
+            <objects>
+                <viewController storyboardIdentifier="trainerVC" id="dac-vZ-mG6" customClass="TrainerViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CK9-oM-h5c"/>
+                        <viewControllerLayoutGuide type="bottom" id="qgN-hz-fbH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CZN-GA-lJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qvc-rt-NJi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJK-EB-GoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="-6"/>
+        </scene>
+        <!--Add New Words View Controller-->
+        <scene sceneID="n40-nK-f2m">
+            <objects>
+                <viewController storyboardIdentifier="addNewWordsVC" id="7tR-Hv-XVj" customClass="AddNewWordsViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRu-Sx-5gd"/>
+                        <viewControllerLayoutGuide type="bottom" id="jv9-FT-FM9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBn-kr-wgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3s-K1-Yuz" customClass="ManyLanguagesTextField">
+                                <rect key="frame" x="32" y="113" width="257" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-kC-IPY">
+                                <rect key="frame" x="81" y="56" width="158" height="29"/>
+                                <segments>
+                                    <segment title="Italian"/>
+                                    <segment title="Japanese"/>
+                                </segments>
+                                <color key="tintColor" red="0.91764705879999997" green="0.2901960784" blue="0.12549019610000001" alpha="1" colorSpace="deviceRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-DW-p0n" customClass="ManyLanguagesTextField">
+                                <rect key="frame" x="28" y="165" width="265" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rsd-kC-IPY" secondAttribute="trailing" constant="65" id="1Wh-U9-z8k"/>
+                            <constraint firstItem="rsd-kC-IPY" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" constant="36" id="3o1-tc-3ol"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="top" secondItem="p3s-K1-Yuz" secondAttribute="bottom" constant="22" id="8xX-19-2Ux"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="NfP-yG-eQd"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="top" secondItem="rsd-kC-IPY" secondAttribute="bottom" constant="29" id="VR4-nm-mEs"/>
+                            <constraint firstItem="rsd-kC-IPY" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="aWR-NM-Am1"/>
+                            <constraint firstItem="rsd-kC-IPY" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="65" id="aZU-tt-KNP"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="12" id="f3a-VW-hYD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p3s-K1-Yuz" secondAttribute="trailing" constant="15" id="irY-z0-wDN"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="16" id="kK3-hj-bXU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qIY-DW-p0n" secondAttribute="trailing" constant="11" id="oL6-Hi-0Pl"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="pb5-1R-ha1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="italianTextField" destination="p3s-K1-Yuz" id="GCU-7u-QiV"/>
+                        <outlet property="japaneseTextField" destination="qIY-DW-p0n" id="XZX-WR-yA3"/>
+                        <outlet property="languageSegment" destination="rsd-kC-IPY" id="h9W-y4-zDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFr-e2-Mt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="654"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cKS-bj-KpO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q3g-qm-ltA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mQh-tQ-iNE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n4L-eC-gPS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiM-v4-yJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="298"/>
         </scene>
     </scenes>
 </document>
