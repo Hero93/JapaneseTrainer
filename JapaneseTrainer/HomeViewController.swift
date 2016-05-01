@@ -18,13 +18,5 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - IBActions & Selectors
-    
-    @IBAction func startTrainingTap(sender: UIButton) {
-        
-    }
-    
-    @IBAction func addNewWordsTap(sender: UIButton) {
-        
-    }
 }
 

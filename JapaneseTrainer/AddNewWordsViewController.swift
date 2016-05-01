@@ -10,9 +10,9 @@ import UIKit
 
 class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var languageSegment: UISegmentedControl!
     @IBOutlet weak var italianTextField: ManyLanguagesTextField!
     @IBOutlet weak var japaneseTextField: ManyLanguagesTextField!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     // MARK: - View lifecycle
     
@@ -32,19 +32,23 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
                                                          name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
     }
     
+    // MARK: - TextField delegate
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         let manyLanguageTextField = textField as? ManyLanguagesTextField
         
-        // Force the textfield to always have the keyboard language associatated with the textfield (even when the user change it)
-        
-        if italianTextField == textField {
-            manyLanguageTextField?.setKeyboardLanguage(Constants.KeyboardLanguage.Italian.rawValue as String)
-        } else {
-            manyLanguageTextField?.setKeyboardLanguage(Constants.KeyboardLanguage.Japanese.rawValue as String)
-        }
-        
+        // Force the textfield to always have the keyboard language associatated with the textfield (even when the user change it).
+        // By reloading the textfield, the keyboard is set to the keyboard chosen in the beginning with the method "setKeyboardLanguage".
         manyLanguageTextField?.reloadInputViews()
+        
+        // Search definition
+    
+//        UIReferenceLibraryViewController *controller = [[UIReferenceLibraryViewController alloc] initWithTerm:term];
+//        [self presentViewController:controller animated:YES completion:^{
+//            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//            }];
+        
         
         return true
     }
@@ -52,7 +56,29 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
     func didUserChangeKeyboardLanguage(parameter: NSNotification) {
         
     }
+    
+    // MARK: - IBActions & selectors
+    
+    @IBAction func doneButtonTap(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
 
+    @IBAction func addWordTap(sender: UIButton) {
+        
+        /* validator */
+        if italianTextField.text!.isEmpty || japaneseTextField.text!.isEmpty {
+            Utility.showAlertViewWithMassage("Inserisci tutti i valori ^_^", inView: self)
+            return
+        }
+        
+        /* save word */
+        let wordToSave = Word(italian: italianTextField.text!, japanese: japaneseTextField.text!)
+        WordsDatabase.saveWord(wordToSave)
+        
+        /* dismiss view */
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -62,5 +88,4 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -14,5 +14,5 @@ class Constants {
         case Italian  = "it-IT"
         case English  = "en-US"
         case Japanese = "ja-JP"
-    }
+    }    
 }

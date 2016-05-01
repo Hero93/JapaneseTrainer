@@ -18,20 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-87-ZFN">
-                                <rect key="frame" x="16" y="199" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-87-ZFN">
+                                <rect key="frame" x="16" y="243" width="288" height="30"/>
                                 <state key="normal" title="Start Training"/>
                                 <connections>
-                                    <action selector="startTrainingTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rO-vc-x2o"/>
                                     <segue destination="dac-vZ-mG6" kind="push" id="Lj0-VM-vQB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu8-xb-ajf">
-                                <rect key="frame" x="16" y="237" width="288" height="30"/>
-                                <state key="normal" title="Add new words"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu8-xb-ajf">
+                                <rect key="frame" x="16" y="281" width="288" height="30"/>
+                                <state key="normal" title="My dictionary"/>
                                 <connections>
-                                    <action selector="addNewWordsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWQ-X7-8XA"/>
-                                    <segue destination="7tR-Hv-XVj" kind="modal" id="45W-dW-Pd8"/>
+                                    <segue destination="M6S-kh-FrG" kind="push" id="81V-2Q-VPX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,49 +81,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3s-K1-Yuz" customClass="ManyLanguagesTextField">
-                                <rect key="frame" x="32" y="113" width="257" height="30"/>
+                                <rect key="frame" x="20" y="131" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-kC-IPY">
-                                <rect key="frame" x="81" y="56" width="158" height="29"/>
-                                <segments>
-                                    <segment title="Italian"/>
-                                    <segment title="Japanese"/>
-                                </segments>
-                                <color key="tintColor" red="0.91764705879999997" green="0.2901960784" blue="0.12549019610000001" alpha="1" colorSpace="deviceRGB"/>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-DW-p0n" customClass="ManyLanguagesTextField">
-                                <rect key="frame" x="28" y="165" width="265" height="30"/>
+                                <rect key="frame" x="20" y="212" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_flag" translatesAutoresizingMaskIntoConstraints="NO" id="jtu-Wl-FlJ">
+                                <rect key="frame" x="22" y="97" width="39" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="7lM-3h-CIE"/>
+                                    <constraint firstAttribute="height" constant="26" id="EhS-fG-NYn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japan_flag" translatesAutoresizingMaskIntoConstraints="NO" id="1c6-Ac-4cs">
+                                <rect key="frame" x="22" y="178" width="39" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="DEW-67-zxA"/>
+                                    <constraint firstAttribute="width" constant="39" id="GJI-hx-kDn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by5-pl-JdW">
+                                <rect key="frame" x="127" y="274" width="66" height="30"/>
+                                <state key="normal" title="Add word"/>
+                                <connections>
+                                    <action selector="addWordTap:" destination="7tR-Hv-XVj" eventType="touchUpInside" id="D3K-VO-Fb5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="rsd-kC-IPY" secondAttribute="trailing" constant="65" id="1Wh-U9-z8k"/>
-                            <constraint firstItem="rsd-kC-IPY" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" constant="36" id="3o1-tc-3ol"/>
-                            <constraint firstItem="qIY-DW-p0n" firstAttribute="top" secondItem="p3s-K1-Yuz" secondAttribute="bottom" constant="22" id="8xX-19-2Ux"/>
-                            <constraint firstItem="qIY-DW-p0n" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="NfP-yG-eQd"/>
-                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="top" secondItem="rsd-kC-IPY" secondAttribute="bottom" constant="29" id="VR4-nm-mEs"/>
-                            <constraint firstItem="rsd-kC-IPY" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="aWR-NM-Am1"/>
-                            <constraint firstItem="rsd-kC-IPY" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="65" id="aZU-tt-KNP"/>
-                            <constraint firstItem="qIY-DW-p0n" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="12" id="f3a-VW-hYD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p3s-K1-Yuz" secondAttribute="trailing" constant="15" id="irY-z0-wDN"/>
-                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="16" id="kK3-hj-bXU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qIY-DW-p0n" secondAttribute="trailing" constant="11" id="oL6-Hi-0Pl"/>
-                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="pb5-1R-ha1"/>
+                            <constraint firstItem="1c6-Ac-4cs" firstAttribute="leading" secondItem="jtu-Wl-FlJ" secondAttribute="leading" id="3z5-8a-DD0"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="4" id="4Ub-Vj-GHs"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="top" secondItem="1c6-Ac-4cs" secondAttribute="bottom" constant="8" id="6ys-ps-aFu"/>
+                            <constraint firstItem="jtu-Wl-FlJ" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" constant="33" id="Gwr-OX-XdP"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="4" id="Hfd-zU-vap"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="SOh-xM-f67"/>
+                            <constraint firstItem="1c6-Ac-4cs" firstAttribute="top" secondItem="p3s-K1-Yuz" secondAttribute="bottom" constant="17" id="WYn-hA-7yU"/>
+                            <constraint firstItem="jtu-Wl-FlJ" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="6" id="XMs-0H-Qkg"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="top" secondItem="jtu-Wl-FlJ" secondAttribute="bottom" constant="8" id="XoN-Kx-Evn"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="bDr-L8-OVc"/>
+                            <constraint firstItem="by5-pl-JdW" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="ebr-cN-5x7"/>
+                            <constraint firstItem="by5-pl-JdW" firstAttribute="top" secondItem="qIY-DW-p0n" secondAttribute="bottom" constant="32" id="hEo-6U-pNI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OCJ-As-vfj">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Q8K-0Y-wtE">
+                            <connections>
+                                <action selector="doneButtonTap:" destination="7tR-Hv-XVj" id="IpB-DH-YRf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="doneButton" destination="Q8K-0Y-wtE" id="a7o-WC-mTG"/>
                         <outlet property="italianTextField" destination="p3s-K1-Yuz" id="GCU-7u-QiV"/>
                         <outlet property="japaneseTextField" destination="qIY-DW-p0n" id="XZX-WR-yA3"/>
-                        <outlet property="languageSegment" destination="rsd-kC-IPY" id="h9W-y4-zDU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFr-e2-Mt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="654"/>
+            <point key="canvasLocation" x="1977" y="740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cKS-bj-KpO">
@@ -145,5 +164,110 @@
             </objects>
             <point key="canvasLocation" x="144" y="298"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BHO-ZJ-J68">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICm-Ii-1eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8v-3v-HMC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uGx-Ks-sAY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7tR-Hv-XVj" kind="relationship" relationship="rootViewController" id="Dsz-Tb-Dv7"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1541" y="740"/>
+        </scene>
+        <!--Saved Word View Controller-->
+        <scene sceneID="LdE-LE-O35">
+            <objects>
+                <viewController id="M6S-kh-FrG" customClass="SavedWordViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q1h-kN-bw5"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Qa-9J-TEJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IAV-dp-FfE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XHv-OP-zcI">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" id="mTs-vZ-uZa" customClass="SavedWordsTableViewCell" customModule="JapaneseTrainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="328" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mTs-vZ-uZa" id="K3f-G2-9Ov">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFN-lu-z97">
+                                                    <rect key="frame" x="40" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-4O-ETf">
+                                                    <rect key="frame" x="160" y="8" width="8" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm4-zf-XEK">
+                                                    <rect key="frame" x="246" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ege-4O-ETf" firstAttribute="centerX" secondItem="K3f-G2-9Ov" secondAttribute="centerX" id="3Va-KM-2d2"/>
+                                                <constraint firstItem="PFN-lu-z97" firstAttribute="top" secondItem="K3f-G2-9Ov" secondAttribute="topMargin" id="CYc-k7-fhD"/>
+                                                <constraint firstItem="PFN-lu-z97" firstAttribute="leading" secondItem="K3f-G2-9Ov" secondAttribute="leadingMargin" constant="32" id="LMZ-qO-ih9"/>
+                                                <constraint firstAttribute="topMargin" secondItem="Ege-4O-ETf" secondAttribute="top" id="PY5-h8-EV3"/>
+                                                <constraint firstItem="Xm4-zf-XEK" firstAttribute="top" secondItem="K3f-G2-9Ov" secondAttribute="topMargin" id="UU9-Gs-HtM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xm4-zf-XEK" secondAttribute="trailing" constant="32" id="t2g-V3-qBd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="italianLabel" destination="PFN-lu-z97" id="hiL-XT-H7y"/>
+                                            <outlet property="japaneseLabel" destination="Xm4-zf-XEK" id="PXT-Mq-pak"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XHv-OP-zcI" firstAttribute="top" secondItem="Q1h-kN-bw5" secondAttribute="bottom" id="1wn-sI-fEO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XHv-OP-zcI" secondAttribute="trailing" constant="-20" id="DYn-CX-tEo"/>
+                            <constraint firstItem="3Qa-9J-TEJ" firstAttribute="top" secondItem="XHv-OP-zcI" secondAttribute="bottom" id="IxC-He-nF1"/>
+                            <constraint firstItem="XHv-OP-zcI" firstAttribute="leading" secondItem="IAV-dp-FfE" secondAttribute="leadingMargin" constant="-20" id="iCI-t4-Gs9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ikf-bw-sE0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="N9l-Rb-dco">
+                            <connections>
+                                <segue destination="m8v-3v-HMC" kind="modal" id="SmX-8z-toa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="wordsTableView" destination="XHv-OP-zcI" id="Go2-iA-d3G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAG-BR-dQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="740"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="italian_flag" width="39" height="26"/>
+        <image name="japan_flag" width="39" height="26"/>
+    </resources>
 </document>

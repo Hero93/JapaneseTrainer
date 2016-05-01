@@ -15,7 +15,6 @@
 
 - (UITextInputMode *) textInputMode {
     for (UITextInputMode *tim in [UITextInputMode activeInputModes]) {
-        NSLog(@"%@", userDefinedKeyboardLanguage);
         if ([[Utilities langFromLocale:userDefinedKeyboardLanguage] isEqualToString:[Utilities langFromLocale:tim.primaryLanguage]]) return tim;
     }
     return [super textInputMode];

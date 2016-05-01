@@ -10,19 +10,30 @@ import Foundation
 
 class Utility {
     
-    static func languageFromLocale(locale: String) -> String {
+    static func showAlertViewWithMassage(message: String, inView view: UIViewController) {
         
-        //var range = locale.rangeOfString("-") as NSRange
+        let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        view.presentViewController(alert, animated: true, completion: {})
         
-        return ""
+        let delay = 2.0 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            view.dismissViewControllerAnimated(true, completion: {})
+        }
     }
-    
-//    + (NSString *)langFromLocale:(NSString *)locale {
-//    NSRange r = [locale rangeOfString:@"_"];
-//    if (r.length == 0) r.location = locale.length;
-//    NSRange r2 = [locale rangeOfString:@"-"];
-//    if (r2.length == 0) r2.location = locale.length;
-//    return [[locale substringToIndex:MIN(r.location, r2.location)] lowercaseString];
-//    }
-    
 }
+
+extension Array {
+    mutating func removeObject<U: Equatable>(object: U) -> Bool {
+        for (idx, objectToCompare) in self.enumerate() { 
+            if let to = objectToCompare as? U {
+                if object == to {
+                    self.removeAtIndex(idx)
+                    return true
+                }
+            }
+        }
+        return false
+    }
+}
+
