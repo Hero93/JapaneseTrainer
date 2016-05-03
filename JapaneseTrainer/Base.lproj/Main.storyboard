@@ -48,24 +48,40 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="japanese trainer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-9Q-FNt">
-                                <rect key="frame" x="51" y="34" width="218" height="120"/>
-                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="50"/>
+                                <rect key="frame" x="37" y="41" width="246" height="122.5"/>
+                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="51"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.22352941176470587" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uP-iU-ibO">
+                                <rect key="frame" x="115.5" y="164.5" width="90" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AmV-Gs-a2I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.24313725489999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_footer" translatesAutoresizingMaskIntoConstraints="NO" id="Slf-Tw-dat">
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.80784313725490198" green="0.27058823529411763" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TOe-9Q-FNt" secondAttribute="trailing" constant="35" id="3mY-1N-wf9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TOe-9Q-FNt" secondAttribute="trailing" constant="21" id="3mY-1N-wf9"/>
                             <constraint firstItem="uF3-87-ZFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4if-qS-TbN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Slf-Tw-dat" secondAttribute="bottom" id="9Lg-A9-9nm"/>
+                            <constraint firstItem="8uP-iU-ibO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J0n-ap-wIZ"/>
                             <constraint firstItem="Yu8-xb-ajf" firstAttribute="top" secondItem="uF3-87-ZFN" secondAttribute="bottom" constant="1" id="K2A-pr-yhV"/>
-                            <constraint firstItem="TOe-9Q-FNt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="Kfi-mQ-rPz"/>
+                            <constraint firstItem="TOe-9Q-FNt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="Kfi-mQ-rPz"/>
                             <constraint firstItem="uF3-87-ZFN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OFC-gd-HVD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uF3-87-ZFN" secondAttribute="trailing" id="TjZ-GQ-FsU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yu8-xb-ajf" secondAttribute="trailing" constant="-4" id="XrF-bQ-90q"/>
                             <constraint firstItem="TOe-9Q-FNt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bre-U4-sRa"/>
-                            <constraint firstItem="TOe-9Q-FNt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="hj9-lq-RRN"/>
+                            <constraint firstItem="8uP-iU-ibO" firstAttribute="top" secondItem="TOe-9Q-FNt" secondAttribute="bottom" constant="1" id="cka-no-0WQ"/>
+                            <constraint firstItem="TOe-9Q-FNt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="hj9-lq-RRN"/>
                             <constraint firstItem="Yu8-xb-ajf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oou-KH-ycG"/>
+                            <constraint firstItem="Slf-Tw-dat" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcl-w4-bG3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nGd-8U-ukN"/>
@@ -293,6 +309,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home_footer" width="320" height="80"/>
         <image name="italian_flag" width="39" height="26"/>
         <image name="japan_flag" width="39" height="26"/>
     </resources>
