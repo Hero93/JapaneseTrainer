@@ -3,4 +3,6 @@
 //
 
 #import "ManyLanguagesTextField.h"
+#import "ItalianTextField.h"
+#import "JapaneseTextField.h"
 #import "Utilities.h"

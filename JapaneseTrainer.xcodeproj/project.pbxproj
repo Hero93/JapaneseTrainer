@@ -15,6 +15,8 @@
 		4B69CECF1CD63F7800D85B83 /* SavedWords+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */; };
 		4B69CED11CD6404900D85B83 /* SavedWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CED01CD6404900D85B83 /* SavedWordsTableViewCell.swift */; };
 		4B69CED31CD649EA00D85B83 /* SavedWords+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CED21CD649EA00D85B83 /* SavedWords+Delegate.swift */; };
+		4B745B451CD800FD00D2D034 /* BebasNeue Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */; };
+		4B745B471CD801A700D2D034 /* norwester.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B745B461CD801A700D2D034 /* norwester.otf */; };
 		4B79AB8F1CD2AEB600F23681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */; };
 		4B79AB911CD2AEB600F23681 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79AB901CD2AEB600F23681 /* HomeViewController.swift */; };
 		4B79AB941CD2AEB600F23681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B79AB921CD2AEB600F23681 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		4B79ABA71CD2B41000F23681 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABA61CD2B41000F23681 /* Utility.swift */; };
 		4B79ABAB1CD2B8C000F23681 /* ManyLanguagesTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABAA1CD2B8C000F23681 /* ManyLanguagesTextField.m */; };
 		4B79ABAE1CD2B9BC00F23681 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABAD1CD2B9BC00F23681 /* Utilities.m */; };
+		4BC5A93E1CD93E94006CE9C6 /* ItalianTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */; };
+		4BC5A9411CD93EB6006CE9C6 /* JapaneseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedWords+DataSource.swift"; sourceTree = "<group>"; };
 		4B69CED01CD6404900D85B83 /* SavedWordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewCell.swift; sourceTree = "<group>"; };
 		4B69CED21CD649EA00D85B83 /* SavedWords+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedWords+Delegate.swift"; sourceTree = "<group>"; };
+		4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.otf"; sourceTree = "<group>"; };
+		4B745B461CD801A700D2D034 /* norwester.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = norwester.otf; sourceTree = "<group>"; };
 		4B79AB8B1CD2AEB600F23681 /* JapaneseTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B79AB901CD2AEB600F23681 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,10 @@
 		4B79ABAA1CD2B8C000F23681 /* ManyLanguagesTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManyLanguagesTextField.m; path = ../ManyLanguagesTextField.m; sourceTree = "<group>"; };
 		4B79ABAC1CD2B99F00F23681 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = ../Utilities.h; sourceTree = "<group>"; };
 		4B79ABAD1CD2B9BC00F23681 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = ../Utilities.m; sourceTree = "<group>"; };
+		4BC5A93C1CD93E94006CE9C6 /* ItalianTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItalianTextField.h; sourceTree = "<group>"; };
+		4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItalianTextField.m; sourceTree = "<group>"; };
+		4BC5A93F1CD93EB6006CE9C6 /* JapaneseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapaneseTextField.h; sourceTree = "<group>"; };
+		4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JapaneseTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +77,9 @@
 		4B69CEC21CD4E95D00D85B83 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B79AB901CD2AEB600F23681 /* HomeViewController.swift */,
-				4B79ABA21CD2B02600F23681 /* TrainerViewController.swift */,
-				4B79ABA41CD2B03D00F23681 /* AddNewWordsViewController.swift */,
-				4B69CECC1CD63A9000D85B83 /* SavedWordViewController.swift */,
-				4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */,
-				4B69CED21CD649EA00D85B83 /* SavedWords+Delegate.swift */,
-				4B69CED01CD6404900D85B83 /* SavedWordsTableViewCell.swift */,
+				4B69CED41CD6AC7100D85B83 /* Home */,
+				4B69CED51CD6AC7A00D85B83 /* Trainer */,
+				4B69CED61CD6AC8700D85B83 /* SavedWords */,
 				4B79AB921CD2AEB600F23681 /* Main.storyboard */,
 			);
 			name = View;
@@ -97,6 +103,10 @@
 			children = (
 				4B79ABA81CD2B89900F23681 /* ManyLanguagesTextField.h */,
 				4B79ABAA1CD2B8C000F23681 /* ManyLanguagesTextField.m */,
+				4BC5A93F1CD93EB6006CE9C6 /* JapaneseTextField.h */,
+				4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */,
+				4BC5A93C1CD93E94006CE9C6 /* ItalianTextField.h */,
+				4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -107,6 +117,34 @@
 				4B69CEC61CD4EA5100D85B83 /* Word.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4B69CED41CD6AC7100D85B83 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4B79AB901CD2AEB600F23681 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		4B69CED51CD6AC7A00D85B83 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				4B79ABA21CD2B02600F23681 /* TrainerViewController.swift */,
+			);
+			name = Trainer;
+			sourceTree = "<group>";
+		};
+		4B69CED61CD6AC8700D85B83 /* SavedWords */ = {
+			isa = PBXGroup;
+			children = (
+				4B79ABA41CD2B03D00F23681 /* AddNewWordsViewController.swift */,
+				4B69CECC1CD63A9000D85B83 /* SavedWordViewController.swift */,
+				4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */,
+				4B69CED21CD649EA00D85B83 /* SavedWords+Delegate.swift */,
+				4B69CED01CD6404900D85B83 /* SavedWordsTableViewCell.swift */,
+			);
+			name = SavedWords;
 			sourceTree = "<group>";
 		};
 		4B79AB821CD2AEB500F23681 = {
@@ -129,6 +167,8 @@
 		4B79AB8D1CD2AEB600F23681 /* JapaneseTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				4B745B461CD801A700D2D034 /* norwester.otf */,
+				4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */,
 				4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */,
 				4B69CEC51CD4E9E100D85B83 /* Model */,
 				4B69CEC21CD4E95D00D85B83 /* View */,
@@ -173,6 +213,7 @@
 				TargetAttributes = {
 					4B79AB8A1CD2AEB600F23681 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = A8QP38BP6R;
 					};
 				};
 			};
@@ -199,8 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B745B451CD800FD00D2D034 /* BebasNeue Bold.otf in Resources */,
 				4B79AB991CD2AEB600F23681 /* LaunchScreen.storyboard in Resources */,
 				4B79AB961CD2AEB600F23681 /* Assets.xcassets in Resources */,
+				4B745B471CD801A700D2D034 /* norwester.otf in Resources */,
 				4B79AB941CD2AEB600F23681 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +262,9 @@
 				4B69CED31CD649EA00D85B83 /* SavedWords+Delegate.swift in Sources */,
 				4B69CECF1CD63F7800D85B83 /* SavedWords+DataSource.swift in Sources */,
 				4B79AB911CD2AEB600F23681 /* HomeViewController.swift in Sources */,
+				4BC5A9411CD93EB6006CE9C6 /* JapaneseTextField.m in Sources */,
 				4B79AB8F1CD2AEB600F23681 /* AppDelegate.swift in Sources */,
+				4BC5A93E1CD93E94006CE9C6 /* ItalianTextField.m in Sources */,
 				4B69CECB1CD634E800D85B83 /* FileSystemUtility.swift in Sources */,
 				4B79ABA31CD2B02600F23681 /* TrainerViewController.swift in Sources */,
 				4B79ABAE1CD2B9BC00F23681 /* Utilities.m in Sources */,
@@ -340,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JapaneseTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.JapaneseTrainer;
@@ -354,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JapaneseTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.JapaneseTrainer;

@@ -10,9 +10,9 @@ import UIKit
 
 class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var italianTextField: ManyLanguagesTextField!
-    @IBOutlet weak var japaneseTextField: ManyLanguagesTextField!
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var italianTextField: ItalianTextField!
+    @IBOutlet weak var japaneseTextField: JapaneseTextField!
     
     // MARK: - View lifecycle
     
@@ -20,27 +20,31 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         italianTextField.delegate = self
-        italianTextField?.setKeyboardLanguage(Constants.KeyboardLanguage.Italian.rawValue as String)
         italianTextField.becomeFirstResponder()
         
         japaneseTextField.delegate = self
-        japaneseTextField?.setKeyboardLanguage(Constants.KeyboardLanguage.Japanese.rawValue as String)
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         /* Observer */
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(AddNewWordsViewController.didUserChangeKeyboardLanguage(_:)),
                                                          name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     // MARK: - TextField delegate
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        let manyLanguageTextField = textField as? ManyLanguagesTextField
-        
+                
         // Force the textfield to always have the keyboard language associatated with the textfield (even when the user change it).
         // By reloading the textfield, the keyboard is set to the keyboard chosen in the beginning with the method "setKeyboardLanguage".
-        manyLanguageTextField?.reloadInputViews()
+        textField.reloadInputViews()
         
         // Search definition
     
@@ -48,7 +52,6 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
 //        [self presentViewController:controller animated:YES completion:^{
 //            [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //            }];
-        
         
         return true
     }

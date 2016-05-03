@@ -10,7 +10,7 @@ import Foundation
 
 class Constants {
     
-    enum KeyboardLanguage : NSString {
+    enum KeyboardLanguage : String {
         case Italian  = "it-IT"
         case English  = "en-US"
         case Japanese = "ja-JP"
