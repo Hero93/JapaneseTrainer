@@ -28,6 +28,9 @@ class SavedWordViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBarHidden = false
+        
         dataSource.checkNewData()
         wordsTableView.reloadData()
     }
