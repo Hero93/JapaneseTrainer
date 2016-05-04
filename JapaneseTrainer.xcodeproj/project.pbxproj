@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1FF8EE1CDA90230032D545 /* BebasNeue Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */; };
 		4B675D251CD4034600A1B0F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B675D241CD4034600A1B0F7 /* Constants.swift */; };
 		4B69CEC71CD4EA5100D85B83 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC61CD4EA5100D85B83 /* Word.swift */; };
 		4B69CEC91CD6300700D85B83 /* WordsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.otf"; sourceTree = "<group>"; };
 		4B675D241CD4034600A1B0F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B69CEC61CD4EA5100D85B83 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsDatabase.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		4B79AB8D1CD2AEB600F23681 /* JapaneseTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */,
 				4B745B461CD801A700D2D034 /* norwester.otf */,
 				4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */,
 				4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */,
@@ -242,6 +245,7 @@
 			files = (
 				4B745B451CD800FD00D2D034 /* BebasNeue Bold.otf in Resources */,
 				4B79AB991CD2AEB600F23681 /* LaunchScreen.storyboard in Resources */,
+				4B1FF8EE1CDA90230032D545 /* BebasNeue Regular.otf in Resources */,
 				4B79AB961CD2AEB600F23681 /* Assets.xcassets in Resources */,
 				4B745B471CD801A700D2D034 /* norwester.otf in Resources */,
 				4B79AB941CD2AEB600F23681 /* Main.storyboard in Resources */,

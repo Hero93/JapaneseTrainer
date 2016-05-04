@@ -23,6 +23,7 @@ class SavedWordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "My Dictionary"
         wordsTableView.dataSource = dataSource
     }
     
