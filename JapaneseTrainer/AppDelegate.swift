@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // --------------- Application Support ----------------
         FileSystemUtility().initApplicationSupportFolder()
         
+        UINavigationBar.appearance().tintColor = UIColor.jpTrainerYellow()
+        UINavigationBar.appearance().barTintColor = UIColor.jpTrainerRed()
+        UINavigationBar.appearance().translucent = false
+        
+        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "BebasNeueBold", size: 23)!,  NSForegroundColorAttributeName: UIColor.jpTrainerYellow()]
+
         return true
     }
 
