@@ -14,6 +14,8 @@ class SavedWordViewController: UIViewController {
     
     let dataSource: SavedWordsDataSource
     
+    // MARK: - Constructor
+    
     required init?(coder aDecoder: NSCoder) {
         self.dataSource = SavedWordsDataSource(words: WordsDatabase.getSavedWords())
         super.init(coder: aDecoder)
@@ -35,15 +37,4 @@ class SavedWordViewController: UIViewController {
         dataSource.checkNewData()
         wordsTableView.reloadData()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -19,6 +19,8 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "New word"
+        
         italianTextField.delegate = self
         italianTextField.becomeFirstResponder()
         
@@ -46,15 +48,10 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         // By reloading the textfield, the keyboard is set to the keyboard chosen in the beginning with the method "setKeyboardLanguage".
         textField.reloadInputViews()
         
-        // Search definition
-    
-//        UIReferenceLibraryViewController *controller = [[UIReferenceLibraryViewController alloc] initWithTerm:term];
-//        [self presentViewController:controller animated:YES completion:^{
-//            [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//            }];
-        
         return true
     }
+    
+    // MARK: - Observers
     
     func didUserChangeKeyboardLanguage(parameter: NSNotification) {
         
@@ -81,14 +78,4 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         /* dismiss view */
         self.dismissViewControllerAnimated(true, completion: {})
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
