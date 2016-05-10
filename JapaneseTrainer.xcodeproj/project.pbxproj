@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B1FF8EE1CDA90230032D545 /* BebasNeue Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */; };
+		4B1FF8F01CDA975E0032D545 /* TrainerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */; };
 		4B675D251CD4034600A1B0F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B675D241CD4034600A1B0F7 /* Constants.swift */; };
 		4B69CEC71CD4EA5100D85B83 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC61CD4EA5100D85B83 /* Word.swift */; };
 		4B69CEC91CD6300700D85B83 /* WordsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.otf"; sourceTree = "<group>"; };
+		4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerEngine.swift; sourceTree = "<group>"; };
 		4B675D241CD4034600A1B0F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B69CEC61CD4EA5100D85B83 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsDatabase.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4B69CEC61CD4EA5100D85B83 /* Word.swift */,
+				4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				4B79ABA71CD2B41000F23681 /* Utility.swift in Sources */,
 				4B79ABAB1CD2B8C000F23681 /* ManyLanguagesTextField.m in Sources */,
 				4B69CEC91CD6300700D85B83 /* WordsDatabase.swift in Sources */,
+				4B1FF8F01CDA975E0032D545 /* TrainerEngine.swift in Sources */,
 				4B69CEC71CD4EA5100D85B83 /* Word.swift in Sources */,
 				4B69CED31CD649EA00D85B83 /* SavedWords+Delegate.swift in Sources */,
 				4B69CECF1CD63F7800D85B83 /* SavedWords+DataSource.swift in Sources */,

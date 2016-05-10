@@ -9,6 +9,7 @@
         <mutableArray key="BebasNeue Bold.otf">
             <string>BebasNeueBold</string>
             <string>BebasNeueBold</string>
+            <string>BebasNeueBold</string>
         </mutableArray>
         <mutableArray key="BebasNeue Regular.otf">
             <string>BebasNeueRegular</string>
@@ -104,11 +105,88 @@
                         <viewControllerLayoutGuide type="bottom" id="qgN-hz-fbH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CZN-GA-lJ6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jD-wk-0Z9" customClass="JapaneseTextField">
+                                <rect key="frame" x="16" y="133" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japan_flag" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Uz-Cj1">
+                                <rect key="frame" x="22" y="99" width="39" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="bVc-Wq-oQJ"/>
+                                    <constraint firstAttribute="width" constant="39" id="j9a-SU-Avp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parola da tradurre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0h-4P-XqQ">
+                                <rect key="frame" x="91" y="47" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0BD-wp-MW6" customClass="ItalianTextField">
+                                <rect key="frame" x="16" y="133" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_flag" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-hZ-Du5">
+                                <rect key="frame" x="22" y="99" width="39" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Arl-Gk-E6z"/>
+                                    <constraint firstAttribute="width" constant="39" id="vEg-GX-6Qh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVh-f4-1GX">
+                                <rect key="frame" x="18" y="192" width="284" height="30"/>
+                                <state key="normal" title="Send Answer"/>
+                                <connections>
+                                    <action selector="checkAnswerTap:" destination="dac-vZ-mG6" eventType="touchUpInside" id="Dtg-Re-zhz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct answer was:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80x-IJ-Svq">
+                                <rect key="frame" x="20" y="222" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37d-hT-ACS">
+                                <rect key="frame" x="22" y="251" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gs7-hZ-Du5" firstAttribute="leading" secondItem="35V-Uz-Cj1" secondAttribute="leading" id="1ww-ZM-8HV"/>
+                            <constraint firstItem="0BD-wp-MW6" firstAttribute="trailing" secondItem="7jD-wk-0Z9" secondAttribute="trailing" id="34g-ba-9AI"/>
+                            <constraint firstItem="7jD-wk-0Z9" firstAttribute="top" secondItem="35V-Uz-Cj1" secondAttribute="bottom" constant="8" id="583-8X-cE1"/>
+                            <constraint firstItem="35V-Uz-Cj1" firstAttribute="leading" secondItem="CZN-GA-lJ6" secondAttribute="leadingMargin" constant="6" id="93F-tb-CXm"/>
+                            <constraint firstItem="gs7-hZ-Du5" firstAttribute="top" secondItem="35V-Uz-Cj1" secondAttribute="top" id="EIe-JQ-ueg"/>
+                            <constraint firstItem="0BD-wp-MW6" firstAttribute="top" secondItem="gs7-hZ-Du5" secondAttribute="bottom" constant="8" id="Es1-j3-L5w"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7jD-wk-0Z9" secondAttribute="leading" id="JOk-AB-285"/>
+                            <constraint firstItem="a0h-4P-XqQ" firstAttribute="centerX" secondItem="CZN-GA-lJ6" secondAttribute="centerX" id="MTJ-fP-QpX"/>
+                            <constraint firstItem="a0h-4P-XqQ" firstAttribute="top" secondItem="CK9-oM-h5c" secondAttribute="bottom" constant="47" id="SYh-qb-ilG"/>
+                            <constraint firstItem="0BD-wp-MW6" firstAttribute="leading" secondItem="7jD-wk-0Z9" secondAttribute="leading" id="Sto-7t-sZ4"/>
+                            <constraint firstItem="35V-Uz-Cj1" firstAttribute="top" secondItem="a0h-4P-XqQ" secondAttribute="bottom" constant="31" id="hhc-w8-Aoq"/>
+                            <constraint firstItem="7jD-wk-0Z9" firstAttribute="centerX" secondItem="CZN-GA-lJ6" secondAttribute="centerX" id="mqR-D4-lGA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7jD-wk-0Z9" secondAttribute="trailing" id="t03-59-tDr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qvc-rt-NJi"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="actionButton" destination="VVh-f4-1GX" id="QBo-0M-8Ez"/>
+                        <outlet property="correctAnswerLabel" destination="37d-hT-ACS" id="OFD-Zo-Vq5"/>
+                        <outlet property="correctAnswerTitle" destination="80x-IJ-Svq" id="eZF-zl-mDp"/>
+                        <outlet property="italianFlagImageView" destination="gs7-hZ-Du5" id="P8L-J9-N6H"/>
+                        <outlet property="italianTextField" destination="0BD-wp-MW6" id="gSu-b1-cuZ"/>
+                        <outlet property="japaneseFlagImageView" destination="35V-Uz-Cj1" id="FjB-4x-0Fk"/>
+                        <outlet property="japaneseTextField" destination="7jD-wk-0Z9" id="at7-dz-1JN"/>
+                        <outlet property="wordToTranslateLabel" destination="a0h-4P-XqQ" id="wAM-cY-DNJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJK-EB-GoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,8 +229,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by5-pl-JdW">
-                                <rect key="frame" x="127" y="274" width="66" height="30"/>
-                                <state key="normal" title="Add word"/>
+                                <rect key="frame" x="127" y="265" width="67" height="33"/>
+                                <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="21"/>
+                                <state key="normal" title="Add word">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.6588235294" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addWordTap:" destination="7tR-Hv-XVj" eventType="touchUpInside" id="D3K-VO-Fb5"/>
                                 </connections>
@@ -171,7 +252,7 @@
                             <constraint firstItem="p3s-K1-Yuz" firstAttribute="top" secondItem="jtu-Wl-FlJ" secondAttribute="bottom" constant="8" id="XoN-Kx-Evn"/>
                             <constraint firstItem="qIY-DW-p0n" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="bDr-L8-OVc"/>
                             <constraint firstItem="by5-pl-JdW" firstAttribute="centerX" secondItem="ZBn-kr-wgN" secondAttribute="centerX" id="ebr-cN-5x7"/>
-                            <constraint firstItem="by5-pl-JdW" firstAttribute="top" secondItem="qIY-DW-p0n" secondAttribute="bottom" constant="32" id="hEo-6U-pNI"/>
+                            <constraint firstItem="by5-pl-JdW" firstAttribute="top" secondItem="qIY-DW-p0n" secondAttribute="bottom" constant="23" id="hEo-6U-pNI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OCJ-As-vfj">

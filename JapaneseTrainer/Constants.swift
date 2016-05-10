@@ -8,11 +8,15 @@
 
 import Foundation
 
+enum Notifications : String {
+    case didEnterAnswer = "didEnterAnswer"
+}
+
 class Constants {
-    
+        
     enum KeyboardLanguage : String {
         case Italian  = "it-IT"
         case English  = "en-US"
         case Japanese = "ja-JP"
-    }    
+    }
 }
