@@ -15,10 +15,6 @@ class SavedWordsDataSource : NSObject {
     init(words: [Word]?) {
         self.words = words
     }
-    
-    func checkNewData() {
-        words = WordsDatabase.getSavedWords()
-    }
 }
 
 extension SavedWordsDataSource : UITableViewDataSource {

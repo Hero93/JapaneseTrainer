@@ -34,7 +34,7 @@ class SavedWordViewController: UIViewController {
         
         self.navigationController?.navigationBarHidden = false
         
-        dataSource.checkNewData()
+        dataSource.words = WordsDatabase.getSavedWords()
         wordsTableView.reloadData()
     }
 }
