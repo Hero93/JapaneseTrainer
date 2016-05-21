@@ -28,6 +28,26 @@ class WordsDatabase {
         }
     }
     
+    static func updateDBWithWords(words: [Word]) {
+     
+        deleteDB()
+        NSKeyedArchiver.archiveRootObject(words, toFile: wordDBPath)
+    }
+    
+    private static func deleteDB() -> Bool {
+        
+        let exists = NSFileManager.defaultManager().fileExistsAtPath(wordDBPath)
+        if exists {
+            do {
+                try NSFileManager.defaultManager().removeItemAtPath(wordDBPath)
+            }catch let error as NSError {
+                print("error: \(error.localizedDescription)")
+                return false
+            }
+        }
+        return exists
+    }
+    
     static func removeWord(word: Word) {
         if var words = NSKeyedUnarchiver.unarchiveObjectWithFile(wordDBPath) as? [Word] {
             
@@ -39,5 +59,18 @@ class WordsDatabase {
             
             NSKeyedArchiver.archiveRootObject(words, toFile: wordDBPath)
         }
+    }
+    
+    static func getWord(italian: String, japanese : String) -> Word? {
+        
+        guard let word = getSavedWords()?.filter({$0.italian == italian && $0.japanese == japanese}).first else {
+            return nil
+        }
+        
+        return word
+    }
+    
+    static func getMostWrongSavedWords() -> [Word]? {
+        return getSavedWords()?.filter({$0.wrongAnswersAmount >= 3 && ($0.wrongAnswersAmount > $0.correctAnswersAmount)})
     }
 }

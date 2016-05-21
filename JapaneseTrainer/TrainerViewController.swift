@@ -89,7 +89,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: Fail
     
     func trainingDidFailed(reason: String) {
-        print(reason)
+        Utility.showAlertViewWithMassage(reason, inView: self)
     }
     
     // MARK: Running
@@ -156,9 +156,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     
     // MARK: End
     
-    func trainingDidFinishWithCorrectAnswers(correctAnswers: Int, andWrongAnswers: Int) {
-        
-        correctAnswerLabel.hidden = true
-        correctAnswerTitle.hidden = true
+    func trainingDidFinish() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 }

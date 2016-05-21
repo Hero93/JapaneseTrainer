@@ -21,11 +21,23 @@ enum Answer : Int {
 class Word : NSObject, NSCoding {
     var italian : String
     var japanese : String
+    var wrongAnswersAmount : Int
+    var correctAnswersAmount : Int
     
     // Memberwise initializer
     init(italian: String, japanese: String) {
         self.italian = italian
         self.japanese = japanese
+        self.wrongAnswersAmount = 0
+        self.correctAnswersAmount = 0
+    }
+    
+    convenience init(italian: String, japanese: String, wrongAnswersAmount: Int, correctAnswersAmount: Int) {
+        self.init(italian: italian, japanese: japanese)
+        self.italian = italian
+        self.japanese = japanese
+        self.wrongAnswersAmount = wrongAnswersAmount
+        self.correctAnswersAmount = correctAnswersAmount
     }
     
     // MARK: NSCoding
@@ -37,13 +49,17 @@ class Word : NSObject, NSCoding {
         
         self.init(
             italian: italian,
-            japanese: japanese
+            japanese: japanese,
+            wrongAnswersAmount: decoder.decodeIntegerForKey("wrongAnswersAmount"),
+            correctAnswersAmount: decoder.decodeIntegerForKey("correctAnswersAmount")
         )
     }
     
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(self.italian, forKey: "italian")
         coder.encodeObject(self.japanese, forKey: "japanese")
+        coder.encodeInteger(self.wrongAnswersAmount, forKey: "wrongAnswersAmount")
+        coder.encodeInteger(self.correctAnswersAmount, forKey: "correctAnswersAmount")
     }
 }
 

@@ -11,7 +11,7 @@ import Foundation
 protocol TrainerEngineDelegate {
     func trainingDidStart()
     func trainingDidFailed(reason: String)
-    func trainingDidFinishWithCorrectAnswers(correctAnswers: Int, andWrongAnswers: Int)
+    func trainingDidFinish()
     func trainingCurrentWord(word: TrainerWord, withAnswerLanguage: Language)
     func trainingCurrentCorrectWords(correctAnswers: Int, outOf: Int)
     func trainingCurrentAnswerWrongWithCorrectAnswer(correctAnswer: TrainerWord, ofLanguage: Language)
@@ -20,7 +20,8 @@ protocol TrainerEngineDelegate {
 class TrainerEngine : TrainerViewControllerDelegate {
     
     private var questions : [TrainerWord]?
-    var currentWordToAnswer : TrainerWord!
+    private var currentWordToAnswer : TrainerWord!
+    
     var delegate : TrainerEngineDelegate?
     
     init(viewController: UIViewController) {
@@ -51,11 +52,9 @@ class TrainerEngine : TrainerViewControllerDelegate {
             if let word = getWordToShow() {
                 delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
             } else {
-                delegate.trainingDidFinishWithCorrectAnswers(0, andWrongAnswers: 0)
+                delegate.trainingDidFailed("Devi inserire delle parole nel tuo dizionario :)")
             }
         }
-        
-        /* */
     }
     
     // MARK: - Utility
@@ -68,29 +67,23 @@ class TrainerEngine : TrainerViewControllerDelegate {
         
         let randomWord = questions.randomElement()
         
-        if !randomWord.isAnswered || randomWord.answerState == .Wrong {
-        
-            /* get unanswered or wrong words */
-            currentWordToAnswer = randomWord
-            return randomWord
-
-        } else {
+        if randomWord.answerState == .Correct {
             
-            var correctAnswers = 0
-            
-            for word in questions {
-                if word.isAnswered && word.answerState == .Correct {
-                    correctAnswers += correctAnswers
-                }
-            }
-            
-            /* the user answered all questions correctly */
-            if correctAnswers == questions.count {
+            /* user answered all questions correctly, no word left! */
+            if questions.filter({$0.answerState == .Correct}).count == questions.count {
                 return nil
             }
+            
+            /* I don't need a random word both answered and right, get a new one! */
+            return getWordToShow()
         }
         
-        getWordToShow()
+        if !randomWord.isAnswered || randomWord.answerState == .Wrong {
+            
+            /* Random word is unaswered or wrong, show it! */
+            currentWordToAnswer = randomWord
+            return randomWord
+        }
         
         return nil
     }
@@ -105,6 +98,13 @@ class TrainerEngine : TrainerViewControllerDelegate {
         default:
             return .Italian
         }
+    }
+    
+    private func buildMostWrongWords() {
+        
+        let updatedWords = questions!.map({Word(italian: $0.italian, japanese: $0.japanese, wrongAnswersAmount: $0.wrongAnswersAmount, correctAnswersAmount: $0.correctAnswersAmount)})
+        
+        WordsDatabase.updateDBWithWords(updatedWords)
     }
     
     // MARK: - TrainerViewController delegate methods
@@ -132,6 +132,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
                 if question == currentWordToAnswer {
                     question.isAnswered = true
                     question.answerState = .Correct
+                    question.correctAnswersAmount += 1
                     break
                 }
             }
@@ -141,7 +142,8 @@ class TrainerEngine : TrainerViewControllerDelegate {
                 if let word = getWordToShow() {
                     delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
                 } else {
-                    delegate.trainingDidFinishWithCorrectAnswers(0, andWrongAnswers: 0)
+                    buildMostWrongWords()
+                    delegate.trainingDidFinish()
                 }
             }
             
@@ -153,6 +155,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
                 for question in questions! {
                     if question == currentWordToAnswer {
                         question.answerState = .Wrong
+                        question.wrongAnswersAmount += 1
                         delegate.trainingCurrentAnswerWrongWithCorrectAnswer(question, ofLanguage: question.answerLanguage)
                     }
                 }
@@ -176,7 +179,8 @@ class TrainerEngine : TrainerViewControllerDelegate {
             if let word = getWordToShow() {
                 delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
             } else {
-                delegate.trainingDidFinishWithCorrectAnswers(0, andWrongAnswers: 0)
+                buildMostWrongWords()
+                delegate.trainingDidFinish()
             }
         }
     }
