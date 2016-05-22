@@ -80,11 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B2499A21CF212E80055F696 /* New Group */ = {
+		4B2499A21CF212E80055F696 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */,
+				4B745B461CD801A700D2D034 /* norwester.otf */,
+				4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */,
 			);
-			name = "New Group";
+			name = Font;
 			sourceTree = "<group>";
 		};
 		4B69CEC21CD4E95D00D85B83 /* View */ = {
@@ -182,11 +185,8 @@
 		4B79AB8D1CD2AEB600F23681 /* JapaneseTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				4B2499A21CF212E80055F696 /* New Group */,
-				4B1FF8ED1CDA90230032D545 /* BebasNeue Regular.otf */,
-				4B745B461CD801A700D2D034 /* norwester.otf */,
-				4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */,
 				4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */,
+				4B2499A21CF212E80055F696 /* Font */,
 				4B69CEC51CD4E9E100D85B83 /* Model */,
 				4B69CEC21CD4E95D00D85B83 /* View */,
 				4B69CEC31CD4E97500D85B83 /* Utilities */,
