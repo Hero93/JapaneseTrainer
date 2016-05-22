@@ -15,7 +15,7 @@
 
 - (UITextInputMode *) textInputMode {
     
-    userDefinedKeyboardLanguage = @"it-IT";//@"ja-JP";
+    userDefinedKeyboardLanguage = @"ja-JP";
     
     for (UITextInputMode *tim in [UITextInputMode activeInputModes]) {
         if ([[Utilities langFromLocale:userDefinedKeyboardLanguage] isEqualToString:[Utilities langFromLocale:tim.primaryLanguage]]) return tim;
