@@ -10,31 +10,54 @@ import Foundation
 
 class Utility {
     
-    static func showAlertViewWithMassage(message: String, inView view: UIViewController) {
+    static func showYesNoAlertView(message message: String, textYes: String, textNo: String, view: UIViewController, onYes:()-> Void, onNo: () -> Void) {
         
-        let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        view.presentViewController(alert, animated: true, completion: {})
+        //Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "Bepooler", message: message, preferredStyle: .Alert)
         
-        let delay = 2.0 * Double(NSEC_PER_SEC)
+        // cancel action
+        var cancelText = ""
+        if textNo.characters.count > 0 {
+            cancelText = textNo
+        } else {
+            cancelText = NSLocalizedString("no", comment: "")
+        }
+        let cancelAction: UIAlertAction = UIAlertAction(title: cancelText, style: .Cancel) { action -> Void in
+            onNo()
+        }
+        
+        // yes action
+        var okText = ""
+        if textYes.characters.count > 0 {
+            okText = textYes
+        } else {
+            okText = NSLocalizedString("yes", comment: "")
+        }
+        let yesAction: UIAlertAction = UIAlertAction(title: okText, style: .Default) { action -> Void in
+            onYes()
+        }
+        
+        actionSheetController.addAction(cancelAction)
+        actionSheetController.addAction(yesAction)
+        
+        //Present the AlertController
+        view.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    
+    static func showAlertViewInViewController(viewController: UIViewController, withMessage message: String, timeLenght: Double) {
+        
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        
+        alert.view.tintColor = UIColor.blackColor()
+        let delay = timeLenght * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
-            view.dismissViewControllerAnimated(true, completion: {})
+            viewController.dismissViewControllerAnimated(true, completion: {})
         }
     }
 }
 
 extension Array {
-    mutating func removeObject<U: Equatable>(object: U) -> Bool {
-        for (idx, objectToCompare) in self.enumerate() { 
-            if let to = objectToCompare as? U {
-                if object == to {
-                    self.removeAtIndex(idx)
-                    return true
-                }
-            }
-        }
-        return false
-    }
     
     func randomElement() -> Element {
         let index = Int(arc4random_uniform(UInt32(self.count)))
