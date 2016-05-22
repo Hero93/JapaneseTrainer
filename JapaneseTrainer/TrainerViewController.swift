@@ -38,7 +38,9 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "TRAINER"
         self.navigationController?.navigationBarHidden = false
+        self.navigationItem.hidesBackButton = true
         
         trainerEngine = TrainerEngine(viewController: self)
         trainerEngine.delegate = self
