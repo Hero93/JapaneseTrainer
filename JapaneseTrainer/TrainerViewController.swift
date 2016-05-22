@@ -38,12 +38,21 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = false
+        
         trainerEngine = TrainerEngine(viewController: self)
         trainerEngine.delegate = self
         trainerEngine.start()
     }
     
     // MARK: - IBActions
+    
+    @IBAction func closeTap(sender: AnyObject) {
+        
+        Utility.showYesNoAlertView(message: "Are you sure you want to exit?", textYes: "yes", textNo: "no", view: self, onYes: {
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }, onNo: {})
+    }
     
     @IBAction func checkAnswerTap(sender: UIButton) {
         
@@ -89,7 +98,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: Fail
     
     func trainingDidFailed(reason: String) {
-        Utility.showAlertViewWithMassage(reason, inView: self)
+        Utility.showAlertViewInViewController(self, withMessage: reason, timeLenght: 2.0)
     }
     
     // MARK: Running
