@@ -100,7 +100,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: Fail
     
     func trainingDidFailed(reason: String) {
-        Utility.showAlertViewInViewController(self, withMessage: reason, timeLenght: 2.0)
+        Utility.showAlertViewInViewController(self, withMessage: reason, timeLenght: 5.0)
     }
     
     // MARK: Running

@@ -46,7 +46,8 @@ class Utility {
     
     static func showAlertViewInViewController(viewController: UIViewController, withMessage message: String, timeLenght: Double) {
         
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Japanese Trainer", message: message, preferredStyle: .Alert)
+        viewController.presentViewController(alert, animated: true, completion: {})
         
         alert.view.tintColor = UIColor.blackColor()
         let delay = timeLenght * Double(NSEC_PER_SEC)
