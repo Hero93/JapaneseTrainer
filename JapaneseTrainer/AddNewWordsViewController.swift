@@ -67,7 +67,7 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         
         /* validator */
         if italianTextField.text!.isEmpty || japaneseTextField.text!.isEmpty {
-            Utility.showAlertViewInViewController(self, withMessage: "Inserisci tutti i valori ^_^", timeLenght: 2.0)
+            Utility.showAlertViewInViewController(self, withMessage: "Inserisci tutti i valori ^_^", timeLenght: 2.0, onDismiss: {})
             return
         }
         

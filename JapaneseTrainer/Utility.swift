@@ -44,7 +44,7 @@ class Utility {
         view.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    static func showAlertViewInViewController(viewController: UIViewController, withMessage message: String, timeLenght: Double) {
+    static func showAlertViewInViewController(viewController: UIViewController, withMessage message: String, timeLenght: Double, onDismiss: () -> Void) {
         
         let alert = UIAlertController(title: "Japanese Trainer", message: message, preferredStyle: .Alert)
         viewController.presentViewController(alert, animated: true, completion: {})
@@ -53,7 +53,7 @@ class Utility {
         let delay = timeLenght * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue()) {
-            viewController.dismissViewControllerAnimated(true, completion: {})
+            viewController.dismissViewControllerAnimated(true, completion: {onDismiss()})
         }
     }
 }

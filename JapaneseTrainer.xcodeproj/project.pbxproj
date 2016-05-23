@@ -29,6 +29,7 @@
 		4B79ABA71CD2B41000F23681 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABA61CD2B41000F23681 /* Utility.swift */; };
 		4B79ABAB1CD2B8C000F23681 /* ManyLanguagesTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABAA1CD2B8C000F23681 /* ManyLanguagesTextField.m */; };
 		4B79ABAE1CD2B9BC00F23681 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B79ABAD1CD2B9BC00F23681 /* Utilities.m */; };
+		4B855E291CF3AAB4002FD0E4 /* TrainerViewController+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B855E281CF3AAB4002FD0E4 /* TrainerViewController+TextViewDelegate.swift */; };
 		4BA023ED1CF08D1100F958E7 /* MostWrongWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA023EC1CF08D1100F958E7 /* MostWrongWordsViewController.swift */; };
 		4BC5A93E1CD93E94006CE9C6 /* ItalianTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */; };
 		4BC5A9411CD93EB6006CE9C6 /* JapaneseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */; };
@@ -62,6 +63,7 @@
 		4B79ABAA1CD2B8C000F23681 /* ManyLanguagesTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManyLanguagesTextField.m; path = ../ManyLanguagesTextField.m; sourceTree = "<group>"; };
 		4B79ABAC1CD2B99F00F23681 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = ../Utilities.h; sourceTree = "<group>"; };
 		4B79ABAD1CD2B9BC00F23681 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = ../Utilities.m; sourceTree = "<group>"; };
+		4B855E281CF3AAB4002FD0E4 /* TrainerViewController+TextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrainerViewController+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		4BA023EC1CF08D1100F958E7 /* MostWrongWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostWrongWordsViewController.swift; sourceTree = "<group>"; };
 		4BC5A93C1CD93E94006CE9C6 /* ItalianTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItalianTextField.h; sourceTree = "<group>"; };
 		4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItalianTextField.m; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				4B79ABA21CD2B02600F23681 /* TrainerViewController.swift */,
+				4B855E281CF3AAB4002FD0E4 /* TrainerViewController+TextViewDelegate.swift */,
 			);
 			name = Trainer;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4B69CECF1CD63F7800D85B83 /* SavedWords+DataSource.swift in Sources */,
 				4B79AB911CD2AEB600F23681 /* HomeViewController.swift in Sources */,
 				4BA023ED1CF08D1100F958E7 /* MostWrongWordsViewController.swift in Sources */,
+				4B855E291CF3AAB4002FD0E4 /* TrainerViewController+TextViewDelegate.swift in Sources */,
 				4BC5A9411CD93EB6006CE9C6 /* JapaneseTextField.m in Sources */,
 				4B79AB8F1CD2AEB600F23681 /* AppDelegate.swift in Sources */,
 				4BC5A93E1CD93E94006CE9C6 /* ItalianTextField.m in Sources */,

@@ -45,6 +45,11 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         trainerEngine = TrainerEngine(viewController: self)
         trainerEngine.delegate = self
         trainerEngine.start()
+        
+        japaneseTextField.delegate = self
+        italianTextField.delegate = self
+        
+        actionButton.enabled = false
     }
     
     // MARK: - IBActions
@@ -67,7 +72,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
 //            return
 //        }
                 
-        if sender.titleLabel?.text == "Send Answer" {
+        if sender.titleLabel?.text == "Check" {
             
             if let delegate = delegate {
                 
@@ -78,7 +83,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
                 }
             }
             
-        } else if sender.titleLabel?.text == "Next Word" {
+        } else if sender.titleLabel?.text == "Continue" {
             
             if let delegate = delegate {
                 delegate.didDisplayNextWord(currectWord)
@@ -100,14 +105,16 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: Fail
     
     func trainingDidFailed(reason: String) {
-        Utility.showAlertViewInViewController(self, withMessage: reason, timeLenght: 5.0)
+        Utility.showAlertViewInViewController(self, withMessage: reason, timeLenght: 5.0, onDismiss: {
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        })
     }
     
     // MARK: Running
     
     func trainingCurrentWord(word: TrainerWord, withAnswerLanguage: Language) {
         
-        actionButton.setTitle("Send Answer", forState: .Normal)
+        actionButton.setTitle("Check", forState: .Normal)
         correctAnswerLabel.hidden = true
         correctAnswerTitle.hidden = true
         
@@ -116,11 +123,14 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         
         currectWord = word
         
+        actionButton.enabled = false
+        
         switch withAnswerLanguage {
         
         case .Italian:
             /* the user need to answer in italian ... */
             italianTextField.hidden = false
+            italianTextField.becomeFirstResponder()
             italianFlagImageView.hidden = false
             japaneseTextField.hidden = true
             japaneseFlagImageView.hidden = true
@@ -130,6 +140,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         case .Japanese:
             /* the user need to answer in japanese ... */
             japaneseTextField.hidden = false
+            japaneseTextField.becomeFirstResponder()
             japaneseFlagImageView.hidden = false
             italianTextField.hidden = true
             italianFlagImageView.hidden = true
@@ -143,7 +154,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         correctAnswerLabel.hidden = true
         correctAnswerTitle.hidden = true
         
-        actionButton.setTitle("Send Answer", forState: .Normal)
+        actionButton.setTitle("Check", forState: .Normal)
     }
     
     func trainingCurrentAnswerWrongWithCorrectAnswer(correctAnswer: TrainerWord, ofLanguage: Language) {
@@ -151,7 +162,7 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         correctAnswerLabel.hidden = false
         correctAnswerTitle.hidden = false
         
-        actionButton.setTitle("Next Word", forState: .Normal)
+        actionButton.setTitle("Continue", forState: .Normal)
         
         switch ofLanguage {
             
