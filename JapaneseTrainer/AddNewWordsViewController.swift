@@ -67,7 +67,7 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         
         /* validator */
         if italianTextField.text!.isEmpty || japaneseTextField.text!.isEmpty {
-            Utility.showAlertViewInViewController(self, withMessage: "Inserisci tutti i valori ^_^", timeLenght: 2.0, onDismiss: {})
+            Utility.showAlertViewInViewController(self, withMessage: "Input both language ^_^", timeLenght: 2.0, onDismiss: {})
             return
         }
         
@@ -75,7 +75,12 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         let wordToSave = Word(italian: italianTextField.text!, japanese: japaneseTextField.text!)
         WordsDatabase.saveWord(wordToSave)
         
-        /* dismiss view */
-        self.dismissViewControllerAnimated(true, completion: {})
+        /* reset textfield */
+        italianTextField.text = ""
+        italianTextField.becomeFirstResponder()
+        japaneseTextField.text = ""
+        
+        /* show alert */
+        Utility.showAlertViewInViewController(self, withMessage: "Word has been added to you dictionary :)", timeLenght: 2.0, onDismiss: {})
     }
 }

@@ -288,13 +288,13 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3s-K1-Yuz" customClass="ItalianTextField">
-                                <rect key="frame" x="66" y="106" width="250" height="27"/>
+                                <rect key="frame" x="87" y="106" width="229" height="27"/>
                                 <color key="tintColor" red="0.8862745098" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="27"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-DW-p0n" customClass="JapaneseTextField">
-                                <rect key="frame" x="70" y="168" width="242" height="27"/>
+                                <rect key="frame" x="87" y="168" width="225" height="27"/>
                                 <color key="tintColor" red="0.8862745098" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="27"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -328,7 +328,7 @@
                             <constraint firstItem="1c6-Ac-4cs" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="2" id="1WE-Is-VZA"/>
                             <constraint firstItem="qIY-DW-p0n" firstAttribute="top" secondItem="p3s-K1-Yuz" secondAttribute="bottom" constant="35" id="2He-L1-hFJ"/>
                             <constraint firstItem="p3s-K1-Yuz" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" constant="42" id="4bD-PX-w62"/>
-                            <constraint firstItem="qIY-DW-p0n" firstAttribute="leading" secondItem="1c6-Ac-4cs" secondAttribute="trailing" constant="13" id="6bS-9Z-mlf"/>
+                            <constraint firstItem="qIY-DW-p0n" firstAttribute="leading" secondItem="1c6-Ac-4cs" secondAttribute="trailing" constant="30" id="6bS-9Z-mlf"/>
                             <constraint firstItem="by5-pl-JdW" firstAttribute="centerX" secondItem="j0w-bE-JPG" secondAttribute="centerX" id="8ZA-KM-FeN"/>
                             <constraint firstItem="jtu-Wl-FlJ" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" constant="40" id="Dih-c6-AKs"/>
                             <constraint firstItem="1c6-Ac-4cs" firstAttribute="top" secondItem="jtu-Wl-FlJ" secondAttribute="bottom" constant="36" id="SUW-Jh-pMm"/>
@@ -336,7 +336,7 @@
                             <constraint firstItem="j0w-bE-JPG" firstAttribute="top" secondItem="zRu-Sx-5gd" secondAttribute="bottom" id="Xww-XV-X4k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j0w-bE-JPG" secondAttribute="trailing" constant="-28" id="YC8-mG-Qpl"/>
                             <constraint firstItem="j0w-bE-JPG" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="-28" id="Ymy-7x-yXj"/>
-                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="leading" secondItem="jtu-Wl-FlJ" secondAttribute="trailing" constant="9" id="aNF-97-19o"/>
+                            <constraint firstItem="p3s-K1-Yuz" firstAttribute="leading" secondItem="jtu-Wl-FlJ" secondAttribute="trailing" constant="30" id="aNF-97-19o"/>
                             <constraint firstItem="jtu-Wl-FlJ" firstAttribute="leading" secondItem="ZBn-kr-wgN" secondAttribute="leadingMargin" constant="2" id="d2y-7Q-Bud"/>
                             <constraint firstItem="by5-pl-JdW" firstAttribute="top" secondItem="j0w-bE-JPG" secondAttribute="bottom" constant="25" id="fba-DA-yhH"/>
                             <constraint firstItem="p3s-K1-Yuz" firstAttribute="trailing" secondItem="ZBn-kr-wgN" secondAttribute="trailingMargin" constant="12" id="j9Q-AB-Xfs"/>
