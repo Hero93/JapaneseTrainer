@@ -28,23 +28,23 @@ class TrainerEngine : TrainerViewControllerDelegate {
         if let viewController =  viewController as? TrainerViewController {
             viewController.delegate = self
         }
+    }
+    
+    // MARK: - Engine
+    
+    func start() {
         
         /* get words from database */
         if let words = WordsDatabase.getSavedWords() {
             
             /* map "Word" objects into "TrainerWord" */
             questions = words.map({TrainerWord(word: $0, answered: false, answerLanguage: getLanguageToShow(), answerState: nil)})
-        
+            
         } else {
             if let delegate = delegate {
                 delegate.trainingDidFailed("no words in the DB")
             }
-        }        
-    }
-    
-    // MARK: - Engine
-    
-    func start() {
+        }
         
         if let delegate = delegate {
             delegate.trainingDidStart()
@@ -55,6 +55,12 @@ class TrainerEngine : TrainerViewControllerDelegate {
                 delegate.trainingDidFailed("Non ci sono parole nel tuo dizionario :)")
             }
         }
+    }
+    
+    private func finish() {
+        
+        questions = nil
+        currentWordToAnswer = nil
     }
     
     // MARK: - Utility
@@ -143,6 +149,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
                     delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
                 } else {
                     buildMostWrongWords()
+                    finish()
                     delegate.trainingDidFinish()
                 }
             }
@@ -180,6 +187,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
                 delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
             } else {
                 buildMostWrongWords()
+                finish()
                 delegate.trainingDidFinish()
             }
         }

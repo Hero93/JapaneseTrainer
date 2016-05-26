@@ -44,12 +44,17 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
         
         trainerEngine = TrainerEngine(viewController: self)
         trainerEngine.delegate = self
-        trainerEngine.start()
         
         japaneseTextField.delegate = self
         italianTextField.delegate = self
         
         actionButton.enabled = false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        trainerEngine.start()
     }
     
     // MARK: - IBActions
@@ -62,15 +67,6 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     }
     
     @IBAction func checkAnswerTap(sender: UIButton) {
-        
-        /* check empty answer */
-//        if ((italianTextField.text?.isEmpty) != nil) {
-//            Utility.showAlertViewWithMassage("Devi inserire la traduzione!", inView: self)
-//            return
-//        } else {
-//            Utility.showAlertViewWithMassage("Devi inserire la traduzione!", inView: self)
-//            return
-//        }
                 
         if sender.titleLabel?.text == "Check" {
             
@@ -85,13 +81,13 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
             
         } else if sender.titleLabel?.text == "Continue" {
             
+            italianTextField.text = ""
+            japaneseTextField.text = ""
+            
             if let delegate = delegate {
                 delegate.didDisplayNextWord(currectWord)
             }
         }
-        
-        italianTextField.text = ""
-        japaneseTextField.text = ""
     }
     
     // MARK: - Trainer Engine delegate
@@ -179,6 +175,18 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: End
     
     func trainingDidFinish() {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.performSegueWithIdentifier("finish", sender: self)
     }
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "finish" {
+            let finishVC = segue.destinationViewController as? FinishViewController
+        }
+     }
 }

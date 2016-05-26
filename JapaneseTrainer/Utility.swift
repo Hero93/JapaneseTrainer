@@ -13,7 +13,7 @@ class Utility {
     static func showYesNoAlertView(message message: String, textYes: String, textNo: String, view: UIViewController, onYes:()-> Void, onNo: () -> Void) {
         
         //Create the AlertController
-        let actionSheetController: UIAlertController = UIAlertController(title: "Bepooler", message: message, preferredStyle: .Alert)
+        let actionSheetController: UIAlertController = UIAlertController(title: "Japanese Trainer", message: message, preferredStyle: .Alert)
         
         // cancel action
         var cancelText = ""

@@ -33,6 +33,7 @@
 		4BA023ED1CF08D1100F958E7 /* MostWrongWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA023EC1CF08D1100F958E7 /* MostWrongWordsViewController.swift */; };
 		4BC5A93E1CD93E94006CE9C6 /* ItalianTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */; };
 		4BC5A9411CD93EB6006CE9C6 /* JapaneseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */; };
+		4BD09F741CF7905800AA8E0E /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD09F731CF7905800AA8E0E /* FinishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		4BC5A93D1CD93E94006CE9C6 /* ItalianTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItalianTextField.m; sourceTree = "<group>"; };
 		4BC5A93F1CD93EB6006CE9C6 /* JapaneseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapaneseTextField.h; sourceTree = "<group>"; };
 		4BC5A9401CD93EB6006CE9C6 /* JapaneseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JapaneseTextField.m; sourceTree = "<group>"; };
+		4BD09F731CF7905800AA8E0E /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		4B69CEC21CD4E95D00D85B83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BD09F731CF7905800AA8E0E /* FinishViewController.swift */,
 				4BA023EB1CF08CF100F958E7 /* MostWrongWords */,
 				4B69CED41CD6AC7100D85B83 /* Home */,
 				4B69CED51CD6AC7A00D85B83 /* Trainer */,
@@ -301,6 +304,7 @@
 				4B79ABA31CD2B02600F23681 /* TrainerViewController.swift in Sources */,
 				4B79ABAE1CD2B9BC00F23681 /* Utilities.m in Sources */,
 				4B79ABA51CD2B03D00F23681 /* AddNewWordsViewController.swift in Sources */,
+				4BD09F741CF7905800AA8E0E /* FinishViewController.swift in Sources */,
 				4B69CECD1CD63A9000D85B83 /* SavedWordViewController.swift in Sources */,
 				4B675D251CD4034600A1B0F7 /* Constants.swift in Sources */,
 				4B69CED11CD6404900D85B83 /* SavedWordsTableViewCell.swift in Sources */,

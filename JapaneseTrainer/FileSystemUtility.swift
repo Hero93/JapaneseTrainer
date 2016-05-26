@@ -1,9 +1,9 @@
 //
 //  FileSystemUtility.swift
-//  Bepooler
+//  JapaneseTrainer
 //
-//  Created by Luca LG. Gramaglia on 21/04/16.
-//  Copyright © 2016 valentinoMalloggia. All rights reserved.
+//  Created by Luca Gramaglia on 29/04/16.
+//  Copyright © 2016 Luca Gramaglia. All rights reserved.
 //
 
 import Foundation
