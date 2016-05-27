@@ -49,7 +49,7 @@
 		4B69CED21CD649EA00D85B83 /* SavedWords+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedWords+Delegate.swift"; sourceTree = "<group>"; };
 		4B745B441CD800FD00D2D034 /* BebasNeue Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.otf"; sourceTree = "<group>"; };
 		4B745B461CD801A700D2D034 /* norwester.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = norwester.otf; sourceTree = "<group>"; };
-		4B79AB8B1CD2AEB600F23681 /* JapaneseTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B79AB8B1CD2AEB600F23681 /* JPTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B79AB8E1CD2AEB600F23681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B79AB901CD2AEB600F23681 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4B79AB931CD2AEB600F23681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		4B79AB8C1CD2AEB600F23681 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B79AB8B1CD2AEB600F23681 /* JapaneseTrainer.app */,
+				4B79AB8B1CD2AEB600F23681 /* JPTrainer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B79AB8A1CD2AEB600F23681 /* JapaneseTrainer */ = {
+		4B79AB8A1CD2AEB600F23681 /* JPTrainer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B79AB9D1CD2AEB600F23681 /* Build configuration list for PBXNativeTarget "JapaneseTrainer" */;
+			buildConfigurationList = 4B79AB9D1CD2AEB600F23681 /* Build configuration list for PBXNativeTarget "JPTrainer" */;
 			buildPhases = (
 				4B79AB871CD2AEB600F23681 /* Sources */,
 				4B79AB881CD2AEB600F23681 /* Frameworks */,
@@ -227,9 +227,9 @@
 			);
 			dependencies = (
 			);
-			name = JapaneseTrainer;
+			name = JPTrainer;
 			productName = JapaneseTrainer;
-			productReference = 4B79AB8B1CD2AEB600F23681 /* JapaneseTrainer.app */;
+			productReference = 4B79AB8B1CD2AEB600F23681 /* JPTrainer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,6 @@
 				TargetAttributes = {
 					4B79AB8A1CD2AEB600F23681 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = A8QP38BP6R;
 					};
 				};
 			};
@@ -261,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B79AB8A1CD2AEB600F23681 /* JapaneseTrainer */,
+				4B79AB8A1CD2AEB600F23681 /* JPTrainer */,
 			);
 		};
 /* End PBXProject section */
@@ -424,8 +423,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JapaneseTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.JapaneseTrainer;
+				PRODUCT_BUNDLE_IDENTIFIER = it.egate.tutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "db21f6e2-3b5a-4f39-a4d8-bf8489afcf2a";
 				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseTrainer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -439,8 +439,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JapaneseTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.JapaneseTrainer;
+				PRODUCT_BUNDLE_IDENTIFIER = it.egate.tutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "db21f6e2-3b5a-4f39-a4d8-bf8489afcf2a";
 				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseTrainer-Bridging-Header.h";
 			};
 			name = Release;
@@ -457,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B79AB9D1CD2AEB600F23681 /* Build configuration list for PBXNativeTarget "JapaneseTrainer" */ = {
+		4B79AB9D1CD2AEB600F23681 /* Build configuration list for PBXNativeTarget "JPTrainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B79AB9E1CD2AEB600F23681 /* Debug */,
