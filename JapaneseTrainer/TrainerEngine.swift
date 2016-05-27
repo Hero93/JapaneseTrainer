@@ -42,7 +42,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
             
         } else {
             if let delegate = delegate {
-                delegate.trainingDidFailed("no words in the DB")
+                delegate.trainingDidFailed("no words in the Dictionary :(")
             }
         }
         
@@ -52,7 +52,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
             if let word = getWordToShow() {
                 delegate.trainingCurrentWord(word, withAnswerLanguage: word.answerLanguage)
             } else {
-                delegate.trainingDidFailed("Non ci sono parole nel tuo dizionario :)")
+                delegate.trainingDidFailed("no words in the Dictionary :(")
             }
         }
     }
