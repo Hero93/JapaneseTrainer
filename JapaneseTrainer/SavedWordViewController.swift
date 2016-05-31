@@ -17,7 +17,7 @@ class SavedWordViewController: UIViewController {
     // MARK: - Constructor
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataSource = SavedWordsDataSource(words: WordController.getWords())
+        self.dataSource = SavedWordsDataSource(words: WordController.getWords(), allowDelete: true)
         super.init(coder: aDecoder)
     }
     

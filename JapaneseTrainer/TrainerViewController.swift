@@ -110,6 +110,9 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     
     func trainingCurrentWord(word: TrainerWord, withAnswerLanguage: Language) {
         
+        italianTextField.text = ""
+        japaneseTextField.text = ""
+        
         actionButton.setTitle("Check", forState: .Normal)
         correctAnswerLabel.hidden = true
         correctAnswerTitle.hidden = true
@@ -175,6 +178,8 @@ class TrainerViewController: UIViewController, TrainerEngineDelegate {
     // MARK: End
     
     func trainingDidFinish() {
+        italianTextField.text = ""
+        japaneseTextField.text = ""
         self.performSegueWithIdentifier("finish", sender: self)
     }
     

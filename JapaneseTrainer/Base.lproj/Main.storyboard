@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q3g-qm-ltA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q3g-qm-ltA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -37,7 +37,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -67,12 +67,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="japanese trainer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-9Q-FNt">
-                                <rect key="frame" x="37" y="41" width="301" height="122.5"/>
+                                <rect key="frame" x="37" y="41" width="301" height="123"/>
                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="51"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.22352941176470587" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uP-iU-ibO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uP-iU-ibO">
                                 <rect key="frame" x="142" y="164" width="90" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="AmV-Gs-a2I"/>
@@ -128,7 +128,7 @@
         <!--Trainer View Controller-->
         <scene sceneID="zPb-Xb-kMl">
             <objects>
-                <viewController storyboardIdentifier="trainerVC" id="dac-vZ-mG6" customClass="TrainerViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="trainerVC" id="dac-vZ-mG6" customClass="TrainerViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CK9-oM-h5c"/>
                         <viewControllerLayoutGuide type="bottom" id="qgN-hz-fbH"/>
@@ -187,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you say..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRa-7x-A1a">
-                                <rect key="frame" x="14" y="20" width="141.5" height="26"/>
+                                <rect key="frame" x="14" y="20" width="142" height="26"/>
                                 <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="26"/>
                                 <color key="textColor" red="0.8862745098" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -259,7 +259,7 @@
         <!--Finish View Controller-->
         <scene sceneID="vTY-Jg-Xds">
             <objects>
-                <viewController id="iNT-2u-NdJ" customClass="FinishViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iNT-2u-NdJ" customClass="FinishViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y6A-6t-0by"/>
                         <viewControllerLayoutGuide type="bottom" id="7P5-V4-71H"/>
@@ -321,7 +321,7 @@
         <!--Add New Words View Controller-->
         <scene sceneID="n40-nK-f2m">
             <objects>
-                <viewController storyboardIdentifier="addNewWordsVC" id="7tR-Hv-XVj" customClass="AddNewWordsViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewWordsVC" id="7tR-Hv-XVj" customClass="AddNewWordsViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zRu-Sx-5gd"/>
                         <viewControllerLayoutGuide type="bottom" id="jv9-FT-FM9"/>
@@ -363,8 +363,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by5-pl-JdW">
-                                <rect key="frame" x="154" y="265" width="67" height="33"/>
-                                <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="21"/>
+                                <rect key="frame" x="147" y="265" width="82" height="38"/>
+                                <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="26"/>
                                 <state key="normal" title="Add word">
                                     <color key="titleColor" red="0.91764705879999997" green="0.6588235294" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFr-e2-Mt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="740"/>
+            <point key="canvasLocation" x="1971.5" y="739.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cKS-bj-KpO">
@@ -450,7 +450,7 @@
         <!--Saved Word View Controller-->
         <scene sceneID="LdE-LE-O35">
             <objects>
-                <viewController id="M6S-kh-FrG" customClass="SavedWordViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M6S-kh-FrG" customClass="SavedWordViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q1h-kN-bw5"/>
                         <viewControllerLayoutGuide type="bottom" id="3Qa-9J-TEJ"/>
@@ -463,11 +463,11 @@
                                 <rect key="frame" x="-4" y="64" width="383" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" rowHeight="51" id="mTs-vZ-uZa" customClass="SavedWordsTableViewCell" customModule="JapaneseTrainer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" rowHeight="51" id="mTs-vZ-uZa" customClass="SavedWordsTableViewCell" customModule="JPTrainer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="383" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mTs-vZ-uZa" id="K3f-G2-9Ov">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFN-lu-z97">
@@ -502,7 +502,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rln-Jr-BSU">
-                                <rect key="frame" x="-4" y="0.0" width="191.5" height="64"/>
+                                <rect key="frame" x="-4" y="0.0" width="192" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-ei-wVG">
                                         <rect key="frame" x="66" y="12" width="60" height="40"/>
@@ -519,13 +519,13 @@
                                     <constraint firstItem="wiP-ei-wVG" firstAttribute="centerX" secondItem="rln-Jr-BSU" secondAttribute="centerX" id="yTA-eu-dD6"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-PV-xK2">
-                                <rect key="frame" x="187" y="0.0" width="191.5" height="64"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-PV-xK2">
+                                <rect key="frame" x="187" y="0.0" width="192" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="bPB-lb-tHI">
                                         <rect key="frame" x="232" y="12" width="60" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="br4-Mv-WVa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="br4-Mv-WVa">
                                         <rect key="frame" x="66" y="12" width="60" height="40"/>
                                     </imageView>
                                 </subviews>
@@ -572,7 +572,7 @@
         <!--Most Wrong Words View Controller-->
         <scene sceneID="Kis-NN-OWP">
             <objects>
-                <viewController id="qUY-id-6Fc" customClass="MostWrongWordsViewController" customModule="JapaneseTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qUY-id-6Fc" customClass="MostWrongWordsViewController" customModule="JPTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X15-mi-fL3"/>
                         <viewControllerLayoutGuide type="bottom" id="Ar2-lX-UU5"/>
@@ -585,11 +585,11 @@
                                 <rect key="frame" x="-4" y="64" width="383" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" rowHeight="51" id="3RO-0S-2eF" customClass="SavedWordsTableViewCell" customModule="JapaneseTrainer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" rowHeight="51" id="3RO-0S-2eF" customClass="SavedWordsTableViewCell" customModule="JPTrainer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="383" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3RO-0S-2eF" id="EYa-R5-eQk">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-iS-q94">
@@ -624,7 +624,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La1-VH-tF5">
-                                <rect key="frame" x="-4" y="0.0" width="191.5" height="64"/>
+                                <rect key="frame" x="-4" y="0.0" width="192" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="rPW-9q-Hpb">
                                         <rect key="frame" x="66" y="12" width="60" height="40"/>
@@ -641,13 +641,13 @@
                                     <constraint firstItem="rPW-9q-Hpb" firstAttribute="centerY" secondItem="La1-VH-tF5" secondAttribute="centerY" id="vcB-rv-1Eh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-ri-YFI">
-                                <rect key="frame" x="187" y="0.0" width="191.5" height="64"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-ri-YFI">
+                                <rect key="frame" x="187" y="0.0" width="192" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="QQ8-i5-gW4">
                                         <rect key="frame" x="232" y="12" width="60" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="631-Ww-RZb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="japanese_flag_add" translatesAutoresizingMaskIntoConstraints="NO" id="631-Ww-RZb">
                                         <rect key="frame" x="66" y="12" width="60" height="40"/>
                                     </imageView>
                                 </subviews>
