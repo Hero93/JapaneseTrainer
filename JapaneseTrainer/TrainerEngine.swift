@@ -35,7 +35,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
     func start() {
         
         /* get words from database */
-        if let words = WordsDatabase.getSavedWords() {
+        if let words = WordController.getWords() {
             
             /* map "Word" objects into "TrainerWord" */
             questions = words.map({TrainerWord(word: $0, answered: false, answerLanguage: getLanguageToShow(), answerState: nil)})
@@ -110,7 +110,7 @@ class TrainerEngine : TrainerViewControllerDelegate {
         
         let updatedWords = questions!.map({Word(italian: $0.italian, japanese: $0.japanese, wrongAnswersAmount: $0.wrongAnswersAmount, correctAnswersAmount: $0.correctAnswersAmount)})
         
-        WordsDatabase.updateDBWithWords(updatedWords)
+        WordController.addWords(updatedWords)
     }
     
     // MARK: - TrainerViewController delegate methods

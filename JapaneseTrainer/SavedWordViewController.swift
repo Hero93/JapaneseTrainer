@@ -17,7 +17,7 @@ class SavedWordViewController: UIViewController {
     // MARK: - Constructor
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataSource = SavedWordsDataSource(words: WordsDatabase.getSavedWords())
+        self.dataSource = SavedWordsDataSource(words: WordController.getWords())
         super.init(coder: aDecoder)
     }
     
@@ -34,7 +34,7 @@ class SavedWordViewController: UIViewController {
         
         self.navigationController?.navigationBarHidden = false
         
-        dataSource.words = WordsDatabase.getSavedWords()
+        dataSource.words = WordController.getWords()
         wordsTableView.reloadData()
     }
 }

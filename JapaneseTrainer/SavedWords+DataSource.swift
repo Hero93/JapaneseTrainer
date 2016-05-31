@@ -50,7 +50,7 @@ extension SavedWordsDataSource : UITableViewDataSource {
         if editingStyle == .Delete {
             if var words = words {
                 let wordToDelete = words[indexPath.row]
-                WordsDatabase.removeWord(wordToDelete)
+                WordController.removeWord(wordToDelete)
             }
             
             words!.removeAtIndex(indexPath.row)

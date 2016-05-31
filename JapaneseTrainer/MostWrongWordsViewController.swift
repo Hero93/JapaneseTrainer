@@ -17,7 +17,7 @@ class MostWrongWordsViewController: UIViewController {
     // MARK: - Constructor
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataSource = SavedWordsDataSource(words: WordsDatabase.getMostWrongSavedWords())
+        self.dataSource = SavedWordsDataSource(words: WordController.getMostWrongWords())
         super.init(coder: aDecoder)
     }
     

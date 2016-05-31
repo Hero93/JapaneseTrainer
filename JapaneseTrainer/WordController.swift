@@ -8,15 +8,32 @@
 
 import Foundation
 
-class WordsDatabase {
+class WordController {
     
     static let wordDBPath = FileSystemUtility.getCompletePathOfFileNameInApplicationSupport("/wordsDB")
     
-    static func getSavedWords() -> [Word]? {
+    // MARK: - Get
+    
+    static func getWords() -> [Word]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(wordDBPath) as? [Word]
     }
     
-    static func saveWord(word: Word) {
+    static func getWord(italian: String, japanese : String) -> Word? {
+        
+        guard let word = getWords()?.filter({$0.italian == italian && $0.japanese == japanese}).first else {
+            return nil
+        }
+        
+        return word
+    }
+    
+    static func getMostWrongWords() -> [Word]? {
+        return getWords()?.filter({$0.wrongAnswersAmount >= 3 && ($0.wrongAnswersAmount > $0.correctAnswersAmount)})
+    }
+    
+    // MARK: - Add
+    
+    static func addWord(word: Word) {
         
         if var words = NSKeyedUnarchiver.unarchiveObjectWithFile(wordDBPath) as? [Word] {
             words.append(word)
@@ -28,11 +45,13 @@ class WordsDatabase {
         }
     }
     
-    static func updateDBWithWords(words: [Word]) {
+    static func addWords(words: [Word]) {
      
         deleteDB()
         NSKeyedArchiver.archiveRootObject(words, toFile: wordDBPath)
     }
+    
+    // MARK: - Remove
     
     private static func deleteDB() -> Bool {
         
@@ -59,18 +78,5 @@ class WordsDatabase {
             
             NSKeyedArchiver.archiveRootObject(words, toFile: wordDBPath)
         }
-    }
-    
-    static func getWord(italian: String, japanese : String) -> Word? {
-        
-        guard let word = getSavedWords()?.filter({$0.italian == italian && $0.japanese == japanese}).first else {
-            return nil
-        }
-        
-        return word
-    }
-    
-    static func getMostWrongSavedWords() -> [Word]? {
-        return getSavedWords()?.filter({$0.wrongAnswersAmount >= 3 && ($0.wrongAnswersAmount > $0.correctAnswersAmount)})
     }
 }

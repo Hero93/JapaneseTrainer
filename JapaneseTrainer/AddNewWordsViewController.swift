@@ -73,7 +73,7 @@ class AddNewWordsViewController: UIViewController, UITextFieldDelegate {
         
         /* save word */
         let wordToSave = Word(italian: italianTextField.text!, japanese: japaneseTextField.text!)
-        WordsDatabase.saveWord(wordToSave)
+        WordController.addWord(wordToSave)
         
         /* reset textfield */
         italianTextField.text = ""
