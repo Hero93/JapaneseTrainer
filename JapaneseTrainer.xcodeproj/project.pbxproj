@@ -11,7 +11,7 @@
 		4B1FF8F01CDA975E0032D545 /* TrainerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */; };
 		4B675D251CD4034600A1B0F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B675D241CD4034600A1B0F7 /* Constants.swift */; };
 		4B69CEC71CD4EA5100D85B83 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC61CD4EA5100D85B83 /* Word.swift */; };
-		4B69CEC91CD6300700D85B83 /* WordsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */; };
+		4B69CEC91CD6300700D85B83 /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CEC81CD6300700D85B83 /* WordController.swift */; };
 		4B69CECB1CD634E800D85B83 /* FileSystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CECA1CD634E800D85B83 /* FileSystemUtility.swift */; };
 		4B69CECD1CD63A9000D85B83 /* SavedWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CECC1CD63A9000D85B83 /* SavedWordViewController.swift */; };
 		4B69CECF1CD63F7800D85B83 /* SavedWords+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */; };
@@ -41,7 +41,7 @@
 		4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerEngine.swift; sourceTree = "<group>"; };
 		4B675D241CD4034600A1B0F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B69CEC61CD4EA5100D85B83 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsDatabase.swift; sourceTree = "<group>"; };
+		4B69CEC81CD6300700D85B83 /* WordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
 		4B69CECA1CD634E800D85B83 /* FileSystemUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemUtility.swift; sourceTree = "<group>"; };
 		4B69CECC1CD63A9000D85B83 /* SavedWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedWordViewController.swift; sourceTree = "<group>"; };
 		4B69CECE1CD63F7800D85B83 /* SavedWords+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedWords+DataSource.swift"; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 				4B79ABA61CD2B41000F23681 /* Utility.swift */,
 				4B79ABAC1CD2B99F00F23681 /* Utilities.h */,
 				4B79ABAD1CD2B9BC00F23681 /* Utilities.m */,
-				4B69CEC81CD6300700D85B83 /* WordsDatabase.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -137,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4B69CEC61CD4EA5100D85B83 /* Word.swift */,
+				4B69CEC81CD6300700D85B83 /* WordController.swift */,
 				4B1FF8EF1CDA975E0032D545 /* TrainerEngine.swift */,
 			);
 			name = Model;
@@ -289,7 +289,7 @@
 			files = (
 				4B79ABA71CD2B41000F23681 /* Utility.swift in Sources */,
 				4B79ABAB1CD2B8C000F23681 /* ManyLanguagesTextField.m in Sources */,
-				4B69CEC91CD6300700D85B83 /* WordsDatabase.swift in Sources */,
+				4B69CEC91CD6300700D85B83 /* WordController.swift in Sources */,
 				4B1FF8F01CDA975E0032D545 /* TrainerEngine.swift in Sources */,
 				4B69CEC71CD4EA5100D85B83 /* Word.swift in Sources */,
 				4B69CED31CD649EA00D85B83 /* SavedWords+Delegate.swift in Sources */,
