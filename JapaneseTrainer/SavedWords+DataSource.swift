@@ -11,9 +11,11 @@ import Foundation
 class SavedWordsDataSource : NSObject {
     
     var words : [Word]?
+    internal var allowDelete : Bool
     
-    init(words: [Word]?) {
+    init(words: [Word]?, allowDelete: Bool) {
         self.words = words
+        self.allowDelete = allowDelete
     }
 }
 
@@ -42,7 +44,11 @@ extension SavedWordsDataSource : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        if allowDelete {
+            return true
+        }
+        
+        return false
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
